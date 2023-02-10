@@ -1,0 +1,7 @@
+.cat-btn {
+    float: right;
+}
+.new-cat-btn {
+    justify-content: space-between;
+    align-items: center;
+}
