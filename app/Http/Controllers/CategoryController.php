@@ -35,4 +35,18 @@ class CategoryController extends Controller
         $cat = Category::find($id);
         return view('category.create')->with('cat', $cat);
     }
+    public function update(Request $request, $id)
+    {
+        $cat = Category::find($id);
+        $cat->name = $request->name;
+        $cat->save();
+        return redirect()->route('category');
+    }
+
+    public function delete($id)
+    {
+        $cat = Category::find($id);
+        $cat->delete();
+        return back();
+    }
 }

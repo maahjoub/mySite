@@ -11,7 +11,7 @@
                     </div>
 
                     <div class="card-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th scope="col"># ID</th>
@@ -27,7 +27,10 @@
                                         <td>
                                             <a href="{{ route('category.edit', $category->id) }}"
                                                 class="btn btn-dark">Edit</a>
-                                            <form class="d-inline" action="{{ route('category.delete') }}" method="post">
+                                            <form class="d-inline" action="{{ route('category.delete', $category->id) }}"
+                                                method="post">
+                                                @csrf
+                                                @method('delete')
                                                 <button class="btn btn-danger m-2" type="submit">Trash</button>
                                             </form>
                                         </td>

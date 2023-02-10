@@ -6,10 +6,11 @@
                 <div class="card">
                     <h5 class="card-header">Create New Caregory</h5>
                     <div class="card-body">
+
                         <div class="row">
                             <div class="col-md-6 m-auto">
                                 <form
-                                    action="{{ isset($cat) ? route('category.store') : route('category.edit', $cat->id) }}"
+                                    action=" @if (!isset($cat)) {{ route('category.store')  }}@else {{ route('category.update', $cat->id) }} @endif"
                                     method="post">
                                     @csrf
                                     <div class="input-group mb-3">
