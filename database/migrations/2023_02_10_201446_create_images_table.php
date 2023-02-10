@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('author_name');
-            $table->longText('description');
-            $table->foreignId('category_id');
-            $table->date('date_creation');
-            $table->foreignId('image_id');
-            $table->softDeletes();
+            $table->string('image_path');
+            $table->foreignId('project_id');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('images');
     }
 };
