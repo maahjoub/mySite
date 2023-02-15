@@ -35,3 +35,8 @@ Route::delete('/category/delete/{id}', [CategoryController::class, 'delete'])->n
 
 //Project Routs
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
+Route::get('/project/create', [ProjectController::class, 'create'])->name('project.create');
+Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');
+Route::post('/project/create', [ProjectController::class, 'store'])->name('project.store');
+Route::post('/project/update/{id}', [ProjectController::class, 'update'])->name('project.update');
+Route::delete('/project/delete/{id}', [ProjectController::class, 'delete'])->name('project.delete');

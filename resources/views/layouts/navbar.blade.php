@@ -15,6 +15,13 @@
                       <li class="nav-item">
                           <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Admin Dashboard') }}</a>
                       </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('category') }}">{{ __('Category') }}</a>
+                      </li>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('project') }}">{{ __('MY Project') }}</a>
+                      </li>
                   @endif
               </ul>
 

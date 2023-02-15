@@ -20,7 +20,6 @@ return new class extends Migration
             $table->longText('description');
             $table->foreignId('category_id');
             $table->date('date_creation');
-            $table->foreignId('image_id');
             $table->softDeletes();
             $table->timestamps();
         });
