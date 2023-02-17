@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Routing\Controllers\Middleware;
@@ -49,4 +50,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/image/{id}/show', [ImageController::class, 'index'])->name('image.show');
     Route::get('/image/{id}', [ImageController::class, 'addImage'])->name('image');
     Route::post('/image', [ImageController::class, 'store'])->name('image.store');
+
+    // Contact au Routs
+    Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
+    Route::get('contact/create', [ContactController::class, 'create'])->name('contact.create');
+    Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
 });

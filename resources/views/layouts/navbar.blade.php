@@ -22,6 +22,9 @@
                       <li class="nav-item">
                           <a class="nav-link" href="{{ route('project') }}">{{ __('MY Project') }}</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contact.index') }}">{{ __('Open Teckets') }}</a>
+                    </li>
                   @endif
               </ul>
 

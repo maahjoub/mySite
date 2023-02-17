@@ -3,7 +3,7 @@
     <h1>Pproject</h1>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 m-auto">
+            <div class="col-md-10 m-auto">
                 <div class="card">
                     <div class="card-header d-flex new-cat-btn px-5">
                         <h5 class="">Categories</h5>
