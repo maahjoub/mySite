@@ -20,6 +20,7 @@
                                     <th scope="col">Project Autor</th>
                                     <th scope="col">Project Category</th>
                                     <th scope="col">Action</th>
+                                    <th scope="col">Images</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,14 +31,20 @@
                                         <td>{{ $category->author_name }}</td>
                                         <td>{{ $category->category->name }}</td>
                                         <td>
-                                            <a href="{{ route('category.edit', $category->id) }}"
+                                            <a href="{{ route('project.edit', $category->id) }}"
                                                 class="btn btn-dark">Edit</a>
-                                            <form class="d-inline" action="{{ route('category.delete', $category->id) }}"
+                                            <form class="d-inline" action="{{ route('project.delete', $category->id) }}"
                                                 method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <button class="btn btn-danger m-2" type="submit">Trash</button>
+                                                <button class="btn btn-danger" type="submit">Trash</button>
                                             </form>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('image', $category->id) }}"
+                                                class="btn btn-info mx-2">Add Image</a>
+                                            <a href="{{ route('image.show', $category->id) }}"
+                                                    class="btn btn-info mx-2">show Image</a>
                                         </td>
                                     </tr>
                                 @endforeach
