@@ -11,18 +11,14 @@
                 <div class="card-body">
                     @foreach ($tickets as $ticket)
                         <div class="tickets">
-                            <div class="tecket-subject"><h3 class="h2">any Subjects </h3></div>
-                            <div>
-                                <p class="tecket-body d-block p-4">Lorem ipsum dolor sit amet consectetur adipisicing 
-                                    elit. Sit illo fugiat optio, officiis nam maiores ex temporibus tempora provident 
-                                    illum, hic eos eligendi. Voluptas, saepe asperiores impedit porro hic ducimus rerum!
-                                    Non accusamus neque porro deleniti nam fuga praesentium fugit facere harum, maxime 
-                                    reiciendis soluta necessitatibus velit impedit unde adipisci!
-                                </p>
+                            <div class="tecket-subject"><h3 class="h2">{{ $ticket->subject }}</h3></div>
+                            <div class="d-flex justify-between">
+                                <p class="tecket-body d-block p-4">{{ $ticket->Content }}</p>
+                                @if( isset($ticket->attachment) ) <img class="w-25" src="{{ asset('storage/contact/' . $ticket->attachment)}}"> @endif
                             </div>
-                            <span>user name</span>
-                            <span class="p-3 m-3">user email</span>
-                            <span>date</span>
+                            <span>{{ $ticket->name }}</span>
+                            <span class="p-3 m-3">{{ $ticket->email }}</span>
+                            <span>{{ $ticket->created_at->diffForHumans() }}</span>
                         </div>
                     @endforeach
                 </div>
