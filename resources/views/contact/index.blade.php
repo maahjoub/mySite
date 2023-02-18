@@ -11,7 +11,7 @@
                 <div class="card-body">
                     @foreach ($tickets as $ticket)
                         <div class="tickets">
-                            <div class="tecket-subject"><h3 class="h2">{{ $ticket->subject }}</h3></div>
+                            <div class="tecket-subject"><h3 class="h2 text-center">{{ $ticket->subject }}</h3></div>
                             <div class="d-flex justify-between">
                                 <p class="tecket-body d-block p-4">{{ $ticket->Content }}</p>
                                 @if( isset($ticket->attachment) ) <img class="w-25" src="{{ asset('storage/contact/' . $ticket->attachment)}}"> @endif
@@ -20,6 +20,7 @@
                             <span class="p-3 m-3">{{ $ticket->email }}</span>
                             <span>{{ $ticket->created_at->diffForHumans() }}</span>
                         </div>
+                        <hr>
                     @endforeach
                 </div>
             </div>
