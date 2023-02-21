@@ -11,11 +11,11 @@ class ImageController extends Controller
     public function index($id)
     {
         $images = Project::find($id);
-        return view('projects.show', ['images' => $images]);
+        return view('admin.projects.show', ['images' => $images]);
     }
     public function addImage($id)
     {
-        return view('projects.image')->with('id', $id);
+        return view('admin.projects.image')->with('id', $id);
     }
 
     public function store(Request $request)

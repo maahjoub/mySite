@@ -12,12 +12,12 @@ class ProjectController extends Controller
     {
         $projects = Project::with(['category', 'images'])->get();
         // return $projects;
-        return view('projects.index', ['projects' => $projects]);
+        return view('admin.projects.index', ['projects' => $projects]);
     }
     public function create()
     {
         $cats = Category::get();
-        return view('projects.createdit', ['cats' => $cats]);
+        return view('admin.projects.createdit', ['cats' => $cats]);
     }
     public function store(Request $request)
     {
@@ -43,7 +43,7 @@ class ProjectController extends Controller
     {
         $project = Project::find($id);
         $cats = Category::get();
-        return view('projects.createdit', ['cats' => $cats,])->with('project', $project);
+        return view('admin.projects.createdit', ['cats' => $cats,])->with('project', $project);
     }
     public function update(Request $request, $id)
     {
@@ -64,7 +64,7 @@ class ProjectController extends Controller
         return redirect()->route('project');
     }
 
-    
+
     public function delete($id)
     {
         $cat = Project::find($id)->delete();
