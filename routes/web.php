@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Routing\Controllers\Middleware;
-use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,8 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
-
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+        Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     // Category Routs 
     Route::get('/category', [CategoryController::class, 'index'])->name('category');
     Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
