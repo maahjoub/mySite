@@ -6,7 +6,7 @@
         Awesome Template
         http://www.templatemo.com/preview/templatemo_450_awesome
         -->
-		<title>Awesome Responsive Website</title>
+		<title>@yield('title')</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -14,7 +14,9 @@
 		
 		<link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+		{{-- <link rel="stylesheet" href="{{ asset('css/all.css') }}"> --}}
 		<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
 		<script src="{{ asset('js/jquery.js') }}"></script>
@@ -27,11 +29,10 @@
 	<body id="top">
         <div id="app">
             @include('layouts.gust.navbar')
-            <div class="container">
-                <main class="py-4">
-                    @yield('content')
-                </main>
-            </div>
+			<main class="py-4">
+				@yield('content')
+			</main>
         </div>
+		{{-- <script src="{{ asset('js/all.js') }}"></script> --}}
     </body>
     </html>
