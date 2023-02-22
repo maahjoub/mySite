@@ -5,5 +5,17 @@
     justify-content: space-between;
     align-items: center;
 }
-.image {
+.h-fx {
+    max-height: 125px;
+    width: 100%;
+}
+.p-skill {
+    text-align: justify;
+}
+.team-des {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.team-des::-webkit-scrollbar {
+    width: 10px;
 }
