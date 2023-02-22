@@ -3,10 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!--
-        Awesome Template
-        http://www.templatemo.com/preview/templatemo_450_awesome
-        -->
     <title>@yield('title')</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -15,7 +11,6 @@
 
     <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/all.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('main.css') }}">
 
@@ -36,7 +31,6 @@
             @yield('content')
         </main>
     </div>
-    {{-- <script src="{{ asset('js/all.js') }}"></script> --}}
 </body>
 
 </html>
