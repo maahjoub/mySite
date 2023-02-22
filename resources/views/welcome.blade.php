@@ -8,4 +8,5 @@
     @include('inc.skills')
     @include('inc.service')
     @include('inc.contact')
+    @include('inc.footer')
 @endsection
