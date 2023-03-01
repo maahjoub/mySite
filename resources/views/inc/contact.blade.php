@@ -9,7 +9,7 @@
                 <form action="{{ route('contact.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <label>NAME</label>
-                    <input name="fullname" type="text" class="form-control" id="fullname">
+                    <input name="name" type="text" class="form-control" id="fullname">
 
                     <label>EMAIL</label>
                     <input name="email" type="email" class="form-control" id="email">
@@ -21,7 +21,7 @@
                     <input name="attachment" type="file" class="form-control" id="subject">
 
                     <label>MESSAGE</label>
-                    <textarea name="message" rows="4" class="form-control" id="message"></textarea>
+                    <textarea name="body" rows="4" class="form-control" id="message"></textarea>
 
                     <input type="submit" class="form-control">
                 </form>

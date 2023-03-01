@@ -11,7 +11,7 @@ class ContactController extends Controller
     public function index()
     {
         $tickets = Contact::all();
-        return view('contact.index', compact(['tickets']));
+        return view('admin.contact.index', compact(['tickets']));
     }
 
     public function create()
